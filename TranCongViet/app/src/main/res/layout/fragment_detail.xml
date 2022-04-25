@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="com.midterm.trancongviet.model.Data" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title: "
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+
+        ></TextView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_toRightOf="@+id/tv_title"
+        android:text="@{data.title}"
+      >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:text="Desc: "
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/tv_desc"
+        android:text="@{data.desc}"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_timeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_desc"
+        android:text="TimeStamp: "
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/timeStamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/tv_timeStamp"
+        android:layout_marginBottom="20sp"
+        android:layout_below="@id/desc"
+        android:text="@{data.timeStamp}"
+        ></TextView>
+
+
+    <TextView
+        android:id="@+id/tv_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_timeStamp"
+        android:text="lat: "
+        android:textSize="20sp"
+
+        android:layout_marginBottom="20sp"
+
+        ></TextView>
+
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_toRightOf="@+id/tv_lat"
+        android:layout_below="@id/timeStamp"
+        android:text="@{`` + data.lat}"
+        ></TextView>
+
+        <TextView
+            android:id="@+id/tv_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_lat"
+            android:text="lng: "
+            android:textSize="20sp"
+            android:layout_marginBottom="20sp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/lng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/tv_lng"
+            android:layout_marginBottom="20sp"
+            android:layout_below="@id/lat"
+            android:text="@{`` + data.lng}"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_lng"
+            android:text="addr: "
+            android:textSize="20sp"
+            android:layout_marginBottom="20sp"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/tv_addr"
+            android:layout_marginBottom="20sp"
+            android:layout_below="@id/lng"
+            android:text="@{data.addr}"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_addr"
+            android:text="e: "
+            android:textSize="20sp"
+            android:layout_marginBottom="20sp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/e"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/tv_e"
+            android:layout_marginBottom="20sp"
+            android:layout_below="@id/addr"
+            android:text="@{data.e}"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_zip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_e"
+            android:text="zip: "
+            android:textSize="20sp"
+            android:layout_marginBottom="20sp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/zip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/tv_zip"
+            android:layout_below="@id/e"
+            android:text="@{data.zip}"
+            ></TextView>
+
+</RelativeLayout>
+
+</layout>
